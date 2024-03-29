@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ParentUtama"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+        android:id="@+id/container_header"
+        style="@style/header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/WrapContent"
+            android:layout_margin="15dp"
+            android:text="Kalkulator Tip"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/input_text"
+        style="@style/TextStyleWrap"
+        android:layout_marginTop="20dp"
+        android:text="@string/text_input"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_header" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/StyleInputLayanan"
+        android:id="@+id/input_biaya"
+        android:text="@string/text_isi"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_tanya"
+            style="@style/TextStyleWrap"
+            android:layout_marginTop="12dp"
+            android:text="@string/text_tanya"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/input_biaya"
+            app:layout_constraintBottom_toTopOf="@id/tip_pilihan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+           />
+
+    <RadioGroup
+        android:id="@+id/tip_pilihan"
+        style="@style/TextStyleWrap"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/input"
+        android:checkedButton="@id/pil2"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/switch_bulatkan"
+        app:layout_constraintTop_toBottomOf="@id/text_tanya"
+
+       >
+        <RadioButton
+            android:id="@+id/pil1"
+            style="@style/RadioStyle"
+            android:text="@string/pil1"
+            />
+
+        <RadioButton
+            android:id="@+id/pil2"
+            style="@style/RadioStyle"
+            android:checked="true"
+            android:text="@string/pil2"
+             />
+
+        <RadioButton
+            android:id="@+id/pil3"
+            style="@style/RadioStyle"
+            android:text="@string/pil3"
+             />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switch_bulatkan"
+        style="@style/StyleSwitchTip"
+        android:text="@string/bulatkan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tip_pilihan"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_tip"
+        style="@style/ButtonStyle"
+        android:text="@string/btn_nama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switch_bulatkan" />
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:id="@+id/hasil_layout"
+        style="@style/ViewHasil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_tip"
+        app:layout_constraintVertical_bias="0.041">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextHasil"
+            android:text="@string/text_total"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextHasil"
+            android:text="@string/text_hasil"
+             />
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_reaction"
+        style="@style/ImgStyle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hasil_layout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

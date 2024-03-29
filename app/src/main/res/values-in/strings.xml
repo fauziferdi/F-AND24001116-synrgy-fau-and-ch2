@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Kalkulator Tip</string>
+    <string name="text_input">Masukan Biaya Layanan :</string>
+    <string name="text_tanya">Bagaimana Layanan Kami ?</string>
+    <string name="pil1">Sangat Bagus (20%)</string>
+    <string name="pil2">Bagus (15%)</string>
+    <string name="pil3">Lumayan (10%)</string>
+    <string name="bulatkan">Bulatkan Total Tip</string>
+    <string name="btn_nama">Hitung Total Tip</string>
+    <string name="text_total">Total Tip : </string>
+    <string name="text_isi">Rp. 20.000</string>
+    <string name="text_hasil">Rp. 17.000</string>
+</resources>

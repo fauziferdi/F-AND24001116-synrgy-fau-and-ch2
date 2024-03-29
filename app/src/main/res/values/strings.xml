@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calculator Tip</string>
+    <string name="text_input">Enter Service Fee :</string>
+    <string name="text_tanya">How is our service ?</string>
+    <string name="pil1">Very Good (20%)</string>
+    <string name="pil2">Good (15%)</string>
+    <string name="pil3">Not bad (10%)</string>
+    <string name="bulatkan">Round Total Tips</string>
+    <string name="btn_nama">Calculate Total Tip</string>
+    <string name="text_total">Total Tip : </string>
+    <string name="text_isi">Rp. 20,000</string>
+    <string name="text_hasil">Rp. 17,000</string>
+</resources>
